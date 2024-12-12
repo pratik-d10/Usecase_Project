@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: siddhibaad-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: siddhibaad
+  template:
+    metadata:
+      labels:
+        app: siddhibaad
+    spec:
+      containers:
+      - name: siddhibaad-container
+        image: pratikd10/siddhibaad:latest
+        ports:
+        - containerPort: 80
