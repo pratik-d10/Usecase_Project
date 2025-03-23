@@ -19,4 +19,4 @@ jobs:
       - name: Build Project
         run: echo "Deploying..."
       - name: Github Output
-        run: echo "${{ toJSON(github) }}
+        run: echo "${{ toJSON(github) }}"
